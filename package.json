@@ -1,0 +1,46 @@
+{
+  "name": "mojigiri",
+  "description": "Converts Japanese sentences into separate words",
+  "version": "0.0.0",
+  "main": "dist/main.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/qrac/mojigiri",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qrac/mojigiri"
+  },
+  "bugs": {
+    "url": "https://github.com/qrac/mojigiri/issues"
+  },
+  "keywords": [
+    "kana",
+    "separate",
+    "segmenter",
+    "japanese",
+    "mojigiri"
+  ],
+  "author": {
+    "name": "Qrac",
+    "url": "https://qrac.jp"
+  },
+  "organization": {
+    "name": "QRANOKO",
+    "url": "https://qranoko.jp"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:all": "tsup && tsc",
+    "build:tsc": "tsc",
+    "test": "vitest run",
+    "test:dev": "vitest watch",
+    "clean": "npm run clean:dist"
+  },
+  "prettier": {
+    "semi": false
+  }
+}
