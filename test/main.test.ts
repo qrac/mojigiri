@@ -32,6 +32,15 @@ describe("mergeConfig", () => {
     expect(result).toEqual(["※", "注意", "メニュー"])
   })
 
+  it("Test: Example 4", () => {
+    const text = "絵文字✋を🎉👏漢字やカナ🗒に「👍🥳👍混ぜた」場合"
+    const result = mojigiri(text)
+
+    //console.log("result", result)
+    /* prettier-ignore */
+    expect(result).toEqual(["絵文字","✋","を","🎉👏","漢字","や","カナ","🗒","に","「","👍🥳👍","混","ぜた","」","場合"])
+  })
+
   it("Test: One", () => {
     const text = "テキスト"
     const result = mojigiri(text)
