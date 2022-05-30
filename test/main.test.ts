@@ -24,6 +24,14 @@ describe("mergeConfig", () => {
     expect(result).toEqual(["[","number","-",":","01","]","/","index",".","tsx"," ","という"," ","Next",".","js","のような","React","(","JSX",")","。","©","QRANOKO"])
   })
 
+  it("Test: Example 3", () => {
+    const text = "※注意メニュー"
+    const result = mojigiri(text)
+
+    //console.log("result", result)
+    expect(result).toEqual(["※", "注意", "メニュー"])
+  })
+
   it("Test: One", () => {
     const text = "テキスト"
     const result = mojigiri(text)
