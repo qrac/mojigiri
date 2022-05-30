@@ -15,7 +15,7 @@ const mojigiri = (text: string) => {
     "[ァ-ヴー〜]+",
     "[ｦ-ﾟ]+",
     "[一二三四五六七八九十壱弐参拾百千万萬億兆〇]+",
-    "[、。！？〈〉《》「」『』【】〔〕・（）：；［］｛｝]+",
+    "[、。！？〈〉《》「」『』【】〔〕・（）：；［］｛｝]",
   ]
   const reg = new RegExp(`(${patterns.join("|")})`, "ig")
   const words = text.split(reg)
