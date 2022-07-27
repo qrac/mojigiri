@@ -31,19 +31,19 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "build": "tsup",
-    "build:all": "tsup && tsc",
-    "build:tsc": "tsc",
+    "build": "npm run build:src && npm run build:type",
+    "build:src": "esbuild ./src/index.ts --outfile=./dist/index.js",
+    "build:type": "tsc",
     "test": "vitest run",
     "test:dev": "vitest watch",
-    "prepublishOnly": "npm run clean && npm run build:all",
-    "clean": "trash ./dist"
+    "clean": "trash ./dist",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "prettier": {
     "semi": false
   },
   "devDependencies": {
-    "tsup": "^6.0.1",
+    "esbuild": "^0.14.50",
     "typescript": "^4.7.2",
     "vitest": "^0.12.10"
   }

@@ -3,15 +3,16 @@
     "outDir": "dist",
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "allowSyntheticDefaultImports": true,
+    "strict": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "noErrorTruncation": true
+    "noErrorTruncation": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"],
-  "exclude": ["dist", "node_modules"]
+  "include": ["src"]
 }
